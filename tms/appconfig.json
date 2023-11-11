@@ -1,9 +1,9 @@
 {
 	"appName": "TMs Shop",
 	"description": "Travelling Merchant's Shop current stock",
-	"appUrl": "https://starur.github.io/index.html",
-	"configUrl": "https://starur.github.io/appconfig.json",
-	"iconUrl": "https://starur.github.io/img/Uncharted_island_map.png",
+	"appUrl": "https://t-nicholls.github.io/tms/index.html",
+	"configUrl": "https://t-nicholls.github.io/tms/appconfig.json",
+	"iconUrl": "https://t-nicholls.github.io/img/Uncharted_island_map.png",
 	"defaultWidth": 530,
 	"defaultHeight": 315,
 	"minWidth": 137,
