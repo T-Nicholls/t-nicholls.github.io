@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./index.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://runeapps.org/nis/nis.css" />
+    <link rel="stylesheet" type="text/css" href="https://runeapps.org/nis/alt1-currentskin/skinstyle.css" />
+
+    <style type="text/css">
+        body {
+            user-select: none;
+        }
+
+        #outputtable td:nth-child(1) {
+            text-align: center;
+        }
+
+        #outputtable .qtycell:nth-child(4) {
+            text-align: left;
+            width: 300px;
+        }
+
+        #output, #output-minimal {
+            padding-left: 0.5em;
+        }
+
+        table td,
+        table th {
+            border-color: #757575;
+            border-style: solid;
+            border-width: 1px;
+            padding: 0.2em;
+        }
+
+        table img {
+            vertical-align: middle;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        #outputtable, #output-minimal .imgcell {
+            text-align: center;
+        }
+
+        #outputtable, #output-minimal .qtycell {
+            text-align: center;
+        }
+
+        .notis {
+            text-align: center;
+            background-color: rgba(133, 30, 30, 0.548);
+        }
+
+        div#showsettingsbutton:after {
+		margin-left: 0.2em;
+	}
+
+	div#showsettingsbutton {
+		text-align: center;
+		font-size: larger;
+		color: gold;
+		border: 2px solid goldenrod;
+	}
+
+	#settings {
+		border: 1px outset white;
+		padding: 0.5em;
+	}
+
+    #settingscontainer {
+        width:507px;
+        padding-top: 1em;
+        padding-left: 0.5em;
+    }
+
+	#settingscontainer.settings-hidden #settings {
+		display: none;
+	}
+	#settingscontainer.settings-shown #settings {
+		display: block;
+	}
+	#settingscontainer.settings-hidden #showsettingsbutton:after {
+		content: "▼";
+	}
+	#settingscontainer.settings-shown #showsettingsbutton:after {
+		content: "▲";
+	}
+
+    .hidden-table{
+        display: none;
+    }
+     
+    .shown-table{
+        display: block;
+    }
+
+    </style>
+</head>
+
+<body class="nis" onload="MERCH.start()">
+    <h2 style="margin-left: 0.3em;" id="title">Travelling Merchant's Shop - Current stock</h2>
+    <div id="output"></div>
+    <div id="output-minimal" class="hidden-table"></div>
+
+    <div id="settingscontainer" class="settings-hidden">
+        <div id="showsettingsbutton">Handle settings/notifications</div>
+        <div id="settings">
+            <p><input type="checkbox" id="lightweight" name="lightweightMode"> Lightweight table</p>
+            <div id="notificationsOutput">
+                <table id="notificationstable"></table>
+            </div>
+            <div id="resetnotifications" class="nisbutton nobrowser" onclick="MERCH.makeNewContract();" title="Click here to completely redetect the contract, if you moved the interface around.">Reset notifications</div>
+            <div id="promolinks"><a js_href="https://github.com/Starur/Alt1TravellingMerchant" target="_blank">GitHub</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
